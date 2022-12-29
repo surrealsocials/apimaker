@@ -37,7 +37,7 @@ class Builder:
 		with open(self.name,'a') as f: f.write(template+data+'\n\n')
 
 	def run(self):
-		template="if __name__ == '__main__':\n	app.run()"
+		template="if __name__ == '__main__':\n	app.run(host='0.0.0.0', port=8080, debug=False)"
 		with open(self.name,'a') as f: f.write(template+'\n\n') 
 
 	def start(self):
