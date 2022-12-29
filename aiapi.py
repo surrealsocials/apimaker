@@ -23,7 +23,7 @@ def index():
 @app.route("/getfun",methods=["GET"])
 def getfun():
 	args1 = request.args['text']
-	return gimage(args1), 200, {"Access-Control-Allow-Origin": "*"}
+	return gimage(args1)
 	
 
 @app.route("/art.png",methods=["GET"])
