@@ -27,8 +27,13 @@ def getfun():
 	
 
 @app.route("/art.png",methods=["GET"])
-def postfun():
+def art():
 	return send_file("art.png")
+
+
+@app.route("/wheel.gif",methods=["GET"])
+def wheel():
+	return send_file("wheel.gif")
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=8080, debug=False)
