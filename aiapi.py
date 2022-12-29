@@ -1,5 +1,5 @@
 
-from flask import Flask,Response,request
+from flask import Flask,Response,request,send_file
 import openai
 openai.api_key = "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"
 
@@ -18,7 +18,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
 	res= "welcome to your API"
-	return res, 200, {"Access-Control-Allow-Origin": "*"}
+	return send_file("index.html"), 200, {"Access-Control-Allow-Origin": "*"}
 
 @app.route("/getfun",methods=["GET"])
 def getfun():
