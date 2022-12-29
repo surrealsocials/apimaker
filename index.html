@@ -14,7 +14,7 @@
 function gogo(){
 	document.getElementById("im").src = "wheel.gif"
 	let ttt=document.getElementById("tt").value
-	fetch("http://192.168.0.200:8080/getfun?text="+ttt, {method:"GET"})
+	fetch("http://http://127.0.0.1:8080/getfun?text="+ttt, {method:"GET"})
 	 	.then(response => response.text())
 		.then(result => document.getElementById("im").src = result);}
 </script>
