@@ -13,7 +13,6 @@ def gimage(args1):
 	image_url = response['data'][0]['url']
 	return image_url
 
-print(gimage('hello'))
 
 
 app = Flask(__name__)
@@ -25,7 +24,9 @@ def index():
 
 @app.route("/getfun",methods=["GET"])
 def getfun():
-	return gimage(args1), 200, {"Access-Control-Allow-Origin": "*"}
+	args1=(request.args['text'])
+	res=gimage(args1)
+	return res, 200, {"Access-Control-Allow-Origin": "*"}
 
 @app.route("/art.png",methods=["GET"])
 def art():
