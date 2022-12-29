@@ -26,9 +26,9 @@ def getfun():
 	return gimage(args1), 200, {"Access-Control-Allow-Origin": "*"}
 	
 
-@app.route("/postfun",methods=["POST"])
+@app.route("/art.png",methods=["GET"])
 def postfun():
-	return
+	return send_file("art.png")
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=8080, debug=False)
