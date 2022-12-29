@@ -1,7 +1,7 @@
 
 from flask import Flask,Response,request
 import openai
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def gimage(args1):
