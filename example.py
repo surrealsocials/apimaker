@@ -4,9 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	response= "welcome to your API"
-	response.headers['Access-Control-Allow-Origin'] = '*'
-	return response
+	res= "welcome to your API"
+	return res, 200, {"Access-Control-Allow-Origin": "*"}
 
 @app.route("/myfun",methods=["GET"])
 def myfun():
